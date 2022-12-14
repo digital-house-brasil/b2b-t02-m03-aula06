@@ -1,7 +1,9 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -10,107 +12,118 @@ namespace ConsoleApp1
     internal class Program
     {
         static void Main(string[] args) {
+            //Faça um programa que imprima todos os números pares até 100
+            void NumerosPares() {
+                for (int i = 1; i <= 100; i++) {
+                    Console.WriteLine(i);
+                }
+            }
+            // NumerosPares();
 
-            double salario = 1000;
+            //Faça um programa que imprima todos os números ímpares que esteja entre 100 e 0, de forma inversa.
+            void NumerosInmpares() {
+                for (int i = 100; i >= 1; i--) {
+                    Console.WriteLine(i);
+                }
+            }
+            //NumerosInmpares();
 
-            //while (salario < 5000) {
-            //    salario = salario * 100;
-            //    salario *= 2;
-            //    Console.WriteLine("Meu salário é " + salario);
-            //}
+            //Faça um programa que receba um array e imprima ele da forma inversa.
+            //Exemplo:
+            //Entrada:
+            //[1, 2, 3, 4, 5]
+            //Saída:
+            //[5, 4, 3, 2, 1]
+            void ArrayInverso() {
+                int[] numeros = { 1, 2, 3, 4, 5 };
 
-            int opcao = 1;
+                for (int i = (numeros.Length) - 1; i >= 0; i--) {
+                    Console.WriteLine(numeros[i]);
+                }
+            }
+            //ArrayInverso();
 
-            //while (opcao == 1) {
-            //    Console.WriteLine("Digite a opção desejada \n 1 - Repetir \n 2 - Sair");
-            //    opcao = int.Parse(Console.ReadLine());
-            //}
+            //Faça um programa que receba um array de números e imprima o maior e o menor número.
+            //Exemplo:
+            //Entrada:
+            // [1, 2, 3, 4, 5]
+            //Saída:
+            // Maior: 5
+            //Menor: 1
+            void NumeroMaiorMenor() {
+                int[] numeros = { 8, 6, 4, 2, 7 };
 
-            //Console.WriteLine("Programa encerrado");
+                int maior, menor;
 
+                menor = numeros[0];
+                for (int i = 1; i < numeros.Length; i++) {
+                    if (menor > numeros[i])
+                        menor = numeros[i];
+                }
 
-            //int aumento = 450;
+                maior = numeros[0];
+                for (int i = 1; i < numeros.Length; i++) {
+                    if (maior < numeros[i])
+                        maior = numeros[i];
+                }
+                Console.WriteLine("Maior: " + maior);
+                Console.WriteLine("Manor: " + menor);
+            }
+            //NumeroMaiorMenor();
 
-            //while (aumento < 500) {
-            //    Console.WriteLine("While" + aumento);
-            //    aumento += 50;
-            //}
+            //Faça um programa que receba um array de números e ordene - o.O programa deve receber um array de números e ordená - lo.
+            //Exemplo:
+            //Entrada:
+            // [6, 2, 5, 100, 23, 1]
+            //Saída:
+            // [1, 2, 5, 6, 23, 100]
+            void OrdenacaoArray() {
+                int[] numeros = { 56, 7, 4, 90, 1, 3 };
 
-            //do {
-            //    Console.WriteLine("Do while" + aumento);
-            //    aumento += 50;
-            //} while (aumento < 500);
+                for (int i = 0; i < numeros.Length; i++) {
+                    for (int j = i+1; j < numeros.Length; j++) {
+                        if (numeros[i] > numeros[j]) {  
+                            int num = numeros[i];
+                            numeros[i] = numeros[j];
+                            numeros[j] = num;
+                        }
+                    }
+                }
 
-            //for (int i = 10; i >= 1; i--) {
-            //    Console.WriteLine("O Valor de i é " + i);
-            //}
+                foreach (int i in numeros) 
+                    Console.WriteLine(i);
+                
+            }
+            // OrdenacaoArray();
 
-            //int valor = 0;
-            //Console.WriteLine("Digite um valor");
-            //valor = Int16.Parse(Console.ReadLine());
+            //Faça um programa que receba um array com nomes de alunos e verificar se o nome do aluno está na lista.
+            //Exemplo:
+            //Entrada:
+            //  ['João', 'Maria', 'José', 'Pedro']
+            //  Procurar por: 'Maria'
+            //Saída:
+            //  Encontrado!
 
-            //Console.WriteLine("O número digitado, é "+ valor);
+            void ProcurarNome() {
+                string[] nomes = { "João", "Maria", "José", "Pedro" };
 
-            //int repetir = 1;
-            //while (repetir <= 2) {
-            //    for (int i = 1; i <= 10; i++) {
-            //        Console.WriteLine("Contagem " + i);
-            //    }
-            //    repetir++;
-            //}
+                string pesquisa = "Diego";
+                bool achou = false;
 
-            //double[] notas = { 3, 5, 7, 10 };
-            //Console.WriteLine(notas[3]);
+                for (int i = 0; i < nomes.Length; i++) {
+                    if (pesquisa == nomes[i]) {
+                        achou = true;
+                        break;
+                    }
+                }
+                if (achou) {
+                    Console.WriteLine("Encontrado");
+                } else {
+                    Console.WriteLine("Não encontrado");
+                }
+            }
+            // ProcurarNome();
 
-            //double[] notas1 = new double[] { 3, 5, 6, 8 };
-            //Console.WriteLine(notas1[1]);
-
-            double[] notas2 = new double[4];
-            notas2[0] = 5;
-            notas2[1] = 8;
-            notas2[2] = 1;
-            notas2[3] = 3;
-            Console.WriteLine(notas2);
-
-            for (int i = 0; i < notas2.Length; i++)
-                Console.WriteLine("Nota " + (i + 1) + " é " + notas2[i]);
-
-            //int p = 0;
-            //foreach (var nota in notas2) {
-            //    p++;
-            //    Console.WriteLine("Nota " + p + " é " + nota);
-            //}
-            //int j = 0;
-            //while (j < 4) {
-            //    Console.WriteLine("Nota " + (j + 1) + " é " + notas2[j]);
-            //    j++;
-            //}
-            //int v = 0;
-            //do {
-            //    Console.WriteLine("Nota " + (v + 1) + " é " + notas2[v]);
-            //    v++;
-            //} while (v < 4);
-
-            string[,] dados = {
-                {"Nome", "Idade" },
-                {"Paulo", "12" },
-                {"Gabriel", "30" }
-            };
-
-            //Console.WriteLine("Nome: " + dados[1, 0] + " e sua idade é " + dados[1, 1]);
-            //for (int i = 1; i < 3; i++) {
-            //    for (int j = 0; j < 2; j++) {
-            //        if (j == 0) {
-            //            Console.WriteLine("Seu nome é " + dados[i, j]);
-            //        } else {
-            //            Console.WriteLine("Sua idade é " + dados[i, j]);
-            //        }   
-            //    }
-            //}
-
-            //foreach (string v in dados) {
-            //    Console.WriteLine(v+2);
-            //}
             Console.ReadKey();
         }
     }
