@@ -116,9 +116,9 @@ namespace ConsoleApp1
                 //}void Questao1()
             }
 
-            void Questao01()
+            void Questao1()
             {
-                for (int i = 0; i < 100; i++)
+                for (int i = 0; i <= 100; i++)
                 {
                     if (i % 2 == 0)
                     {
@@ -142,7 +142,7 @@ namespace ConsoleApp1
                 Console.WriteLine("Seu vetor em forma inversa ficará assim: ");
                 Console.WriteLine("");
 
-                for (int j = tamanho; j >= 0; j--)
+                for (int j = tamanho-1; j >= 0; j--)
                 {
                     Console.WriteLine(vetor[j]);
                 }
@@ -184,15 +184,61 @@ namespace ConsoleApp1
             }
             void Questao4()
             {
-                //esperar para fazer em aula
+                Console.WriteLine("Digite o tamanho do vetor: ");
+                int tamanho = int.Parse(Console.ReadLine());
+
+                int[] vetor = new int[tamanho];
+
+                for (int i = 0; i < tamanho; i++)
+                {
+                    Console.WriteLine("Digite o valor do elemento na posição " + i + " : ");
+                    int valor = int.Parse(Console.ReadLine());
+                    vetor[i] = valor;
+                }
+                Array.Sort(vetor);
+                Console.WriteLine();
+                Console.WriteLine("Ele organizado ficará assim:");
+                for (int j = 0; j < tamanho; j++)
+                {
+                    Console.WriteLine(vetor[j]);
+                }
             }
             void Questao5()
             {
-                //esperar para fazer em aula
+                Console.WriteLine("Digite o tamanho do vetor: ");
+                int tamanho = int.Parse(Console.ReadLine());
+
+                string[] vetor = new string[tamanho];
+
+                bool achou = false;
+
+                for (int i = 0; i < tamanho; i++)
+                {
+                    Console.WriteLine("Digite o nome na posição " + i + " : ");
+                    string nome = Console.ReadLine();
+                    vetor[i] = nome;
+                }
+
+                Console.WriteLine("Digite o nome que deverá ser procurado: ");
+                string nomeProcurado = Console.ReadLine();
+
+                for (int j = 0; j<tamanho; j++)
+                {
+                    if (vetor[j] == nomeProcurado)
+                    {
+                        achou = true;
+                    }
+                }
+                if (achou)
+                {
+                    Console.WriteLine("Encontrado!");
+                }
+                else
+                {
+                    Console.WriteLine("Não encontrado!");
+                }
             }
-            Questao1();
-            Questao2();
-            Questao3();
+            Questao4();
 
             Console.ReadKey();
         }
