@@ -6,3 +6,11 @@ C:\Users\dhieg\Documents\Jobs\DH\Turmas\IBRF\b2b-t02-m03-aula06\App\ConsoleApp1\
 C:\Users\dhieg\Documents\Jobs\DH\Turmas\IBRF\b2b-t02-m03-aula06\App\ConsoleApp1\obj\Debug\ConsoleApp1.csproj.CoreCompileInputs.cache
 C:\Users\dhieg\Documents\Jobs\DH\Turmas\IBRF\b2b-t02-m03-aula06\App\ConsoleApp1\obj\Debug\ConsoleApp1.exe
 C:\Users\dhieg\Documents\Jobs\DH\Turmas\IBRF\b2b-t02-m03-aula06\App\ConsoleApp1\obj\Debug\ConsoleApp1.pdb
+C:\Users\lucas\Documents\Estudos\Cursos\Digital House\M03\Aula 06\b2b-t02-m03-aula06\App\ConsoleApp1\bin\Debug\ConsoleApp1.exe.config
+C:\Users\lucas\Documents\Estudos\Cursos\Digital House\M03\Aula 06\b2b-t02-m03-aula06\App\ConsoleApp1\bin\Debug\ConsoleApp1.exe
+C:\Users\lucas\Documents\Estudos\Cursos\Digital House\M03\Aula 06\b2b-t02-m03-aula06\App\ConsoleApp1\bin\Debug\ConsoleApp1.pdb
+C:\Users\lucas\Documents\Estudos\Cursos\Digital House\M03\Aula 06\b2b-t02-m03-aula06\App\ConsoleApp1\obj\Debug\ConsoleApp1.csproj.AssemblyReference.cache
+C:\Users\lucas\Documents\Estudos\Cursos\Digital House\M03\Aula 06\b2b-t02-m03-aula06\App\ConsoleApp1\obj\Debug\ConsoleApp1.csproj.SuggestedBindingRedirects.cache
+C:\Users\lucas\Documents\Estudos\Cursos\Digital House\M03\Aula 06\b2b-t02-m03-aula06\App\ConsoleApp1\obj\Debug\ConsoleApp1.csproj.CoreCompileInputs.cache
+C:\Users\lucas\Documents\Estudos\Cursos\Digital House\M03\Aula 06\b2b-t02-m03-aula06\App\ConsoleApp1\obj\Debug\ConsoleApp1.exe
+C:\Users\lucas\Documents\Estudos\Cursos\Digital House\M03\Aula 06\b2b-t02-m03-aula06\App\ConsoleApp1\obj\Debug\ConsoleApp1.pdb
